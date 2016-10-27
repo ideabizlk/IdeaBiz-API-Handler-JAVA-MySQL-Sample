@@ -57,6 +57,8 @@ public class MySQLIdeabizOAuthDataProviderImpl implements IdeabizOAuthDataProvid
                 oAuth2Model.setRefreshToken(result.getString("refreshToken"));
                 oAuth2Model.setConsumerKey(result.getString("consumerKey"));
                 oAuth2Model.setConsumerSecret(result.getString("consumerSecret"));
+                oAuth2Model.setUsername(result.getString("username"));
+                oAuth2Model.setPassword(result.getString("password"));
                 oAuth2Model.setScope(result.getString("scope"));
                 oAuth2Model.setExpire(result.getLong("expire"));
                 oAuth2Model.setTokenURL(result.getString("tokenURL"));
