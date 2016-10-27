@@ -4,6 +4,8 @@ CREATE TABLE IF NOT EXISTS `oauth2` (
   `refreshToken` varchar(255) NOT NULL,
   `consumerKey` varchar(255) NOT NULL,
   `consumerSecret` varchar(255) NOT NULL,
+  `username` varchar(255),
+  `password` varchar(255),
   `scope` varchar(20) NOT NULL,
   `expire` int(10) NOT NULL,
   `tokenURL` text NOT NULL,
