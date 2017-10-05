@@ -63,6 +63,7 @@ public class MySQLIdeabizOAuthDataProviderImpl implements IdeabizOAuthDataProvid
                 oAuth2Model.setExpire(result.getLong("expire"));
                 oAuth2Model.setTokenURL(result.getString("tokenURL"));
                 oAuth2Model.setLastUpdated(result.getString("lastUpdated"));
+                oAuth2Model.setNote(result.getString("note"));
             }
         } catch (SQLException e) {
 
@@ -139,6 +140,10 @@ public class MySQLIdeabizOAuthDataProviderImpl implements IdeabizOAuthDataProvid
 
         this.authDataSource = managerDataSource;
 
+    }
+    public MySQLIdeabizOAuthDataProviderImpl() {
+        logger = Logger.getLogger(MySQLIdeabizOAuthDataProviderImpl.class);
+        gson = new Gson();
     }
 
 }
